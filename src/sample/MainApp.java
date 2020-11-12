@@ -1,7 +1,6 @@
 package sample;
 
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,19 +27,20 @@ public class MainApp extends Application {
      */
     public MainApp() {
         // Add some sample data
-        vehicleData.add(new Vehicle("巴士", "IRNC",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "ITSS",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("通勤车", "ITSS",88,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "IRNC",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "GCNS",88,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("通勤车", "ITSS",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("小汽车", "IRNC",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("小汽车", "IRNC",33,"BUS","综合管理部"));
-        vehicleData.add(new Vehicle("巴士", "IRNC",33,"BUS","综合管理部"));
+        vehicleData.add(new Vehicle("巴士", "IRNC", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("矿车", "ITSS", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("通勤车", "ITSS", 88, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("矿车", "IRNC", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("矿车", "GCNS", 88, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("通勤车", "ITSS", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("小汽车", "IRNC", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("小汽车", "IRNC", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("巴士", "IRNC", 33, "BUS", "综合管理部"));
     }
 
     /**
-     * Returns the data as an observable list of Vehicles. 
+     * Returns the data as an observable list of Vehicles.
+     *
      * @return
      */
     public ObservableList<Vehicle> getVehicleData() {
@@ -56,7 +56,7 @@ public class MainApp extends Application {
 
         initRootLayout();
 
-       showVehicleOverview();
+        showVehicleOverview();
     }
 
     /**
@@ -102,6 +102,7 @@ public class MainApp extends Application {
 
     /**
      * Returns the main stage.
+     *
      * @return
      */
     public Stage getPrimaryStage() {

@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="vehiclepage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VehicleOverviewController">
+<AnchorPane fx:id="vehicleOverview" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VehicleOverviewController">
     <children>
         <TabPane layoutX="45.0" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
@@ -37,11 +37,11 @@
                                        <children>
                                           <TableView fx:id="vehicleTable" nodeOrientation="LEFT_TO_RIGHT" prefHeight="435.0" prefWidth="176.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columns>
-                                              <TableColumn fx:id="vehicleTypeColum" prefWidth="95.0" text="车辆类型" />
-                                                <TableColumn fx:id="companyColum" prefWidth="95.0" text="所有权" />
-                                                <TableColumn fx:id="vehicleNumColum" prefWidth="95.0" text="编号" />
-                                                <TableColumn fx:id="categoryColum" prefWidth="95.0" text="类别" />
-                                                <TableColumn fx:id="departColum" prefWidth="95.0" text="使用部门" />
+                                              <TableColumn fx:id="vehicleTypeColumn" prefWidth="95.0" text="车辆类型" />
+                                                <TableColumn fx:id="companyColumn" prefWidth="95.0" text="所有权" />
+                                                <TableColumn fx:id="vehicleNumColumn" prefWidth="95.0" text="编号" />
+                                                <TableColumn fx:id="categoryColumn" prefWidth="95.0" text="类别" />
+                                                <TableColumn fx:id="departColumn" prefWidth="95.0" text="使用部门" />
                                             </columns>
                                              <columnResizePolicy>
                                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -100,6 +100,7 @@
                                              <buttons>
                                                 <JFXButton prefHeight="58.0" prefWidth="92.0" text="Button" />
                                                 <JFXButton minWidth="59.0" prefHeight="56.0" prefWidth="92.0" />
+                                                <JFXButton layoutX="125.0" layoutY="11.0" minWidth="59.0" onAction="#handleDeleteVehicle" prefHeight="56.0" prefWidth="92.0" text="删除" />
                                              </buttons>
                                           </ButtonBar>
                                        </children>

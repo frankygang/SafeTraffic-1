@@ -1,10 +1,7 @@
 package sample.model;
-import java.time.LocalDate;
 
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -72,8 +69,8 @@ public class Vehicle {
         this.company.set(company);
     }
 
-    public int getVehicleNum() {
-        return vehicleNum.get();
+    public Integer getVehicleNum() {
+        return vehicleNum.getValue();
     }
 
     public IntegerProperty vehicleNumProperty() {
