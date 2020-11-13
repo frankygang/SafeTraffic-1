@@ -58,7 +58,7 @@ public class VehicleEditDialogController {
      *
      * @param vehicle
      */
-    public void setPerson(Vehicle vehicle) {
+    public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
 
         vehicleTypeField.setText(vehicle.getVehicleType());

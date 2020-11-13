@@ -115,4 +115,39 @@ public class VehicleOverviewController {
                     .showWarning();
         }
     }
+    /**
+     * Called when the user clicks the new button. Opens a dialog to edit
+     * details for a new person.
+     */
+    @FXML
+    private void handleNewVehicle() {
+        Vehicle tempVehicle = new Vehicle();
+        boolean okClicked = mainApp.showVehicleEditDialog(tempVehicle);
+        if (okClicked) {
+            mainApp.getVehicleData().add(tempVehicle);
+        }
+    }
+
+    /**
+     * Called when the user clicks the edit button. Opens a dialog to edit
+     * details for the selected person.
+     */
+    @FXML
+    private void handleEditVehicle() {
+        Vehicle selectedVehicle =vehicleTable.getSelectionModel().getSelectedItem();
+        if (selectedVehicle != null) {
+            boolean okClicked = mainApp.showVehicleEditDialog(selectedVehicle);
+            if (okClicked) {
+                showVehicleDetails(selectedVehicle);
+            }
+
+        } else {
+            // Nothing selected.
+            Dialogs.create()
+                    .title("No Selection")
+                    .masthead("No Vehicle Selected")
+                    .message("Please select a Vehicle in the table.")
+                    .showWarning();
+        }
+    }
 }

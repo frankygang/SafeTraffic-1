@@ -4,6 +4,10 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import sample.util.LocalDateAdapter;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
 
 /**
  * Model class for a Vehicle.
@@ -38,13 +42,18 @@ public class Vehicle {
      */
     public Vehicle(String vehicleType,String company,Integer vehicleNum,String category,String depart) {
         // Some initial dummy data, just for convenient testing.
-        this.vehicleType = new SimpleStringProperty(vehicleType);
-        this.company = new SimpleStringProperty(company);
-        this.vehicleNum = new SimpleIntegerProperty(vehicleNum);
-        this.category = new SimpleStringProperty(category);
-        this.depart = new SimpleStringProperty(depart);
+        this.vehicleType = new SimpleStringProperty("巴士");
+        this.company = new SimpleStringProperty("ITSS");
+        this.vehicleNum = new SimpleIntegerProperty(000);
+        this.category = new SimpleStringProperty("货车");
+        this.depart = new SimpleStringProperty("综合管理部");
     }
-
+    //
+//    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+//    public LocalDate getBirthday() {
+//        return birthday.get();
+//    }
+    //
     public String getVehicleType() {
         return vehicleType.get();
     }

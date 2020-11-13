@@ -35,7 +35,7 @@
                                             <items>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <TableView fx:id="vehicleTable" nodeOrientation="LEFT_TO_RIGHT" prefHeight="435.0" prefWidth="176.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView fx:id="vehicleTable" nodeOrientation="LEFT_TO_RIGHT" prefHeight="436.0" prefWidth="257.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columns>
                                               <TableColumn fx:id="vehicleTypeColumn" prefWidth="95.0" text="车辆类型" />
                                                 <TableColumn fx:id="companyColumn" prefWidth="95.0" text="所有权" />
@@ -96,10 +96,10 @@
                                                 <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                              </children>
                                           </GridPane>
-                                          <ButtonBar layoutX="214.0" layoutY="342.0" prefHeight="58.0" prefWidth="200.0">
+                                          <ButtonBar layoutX="214.0" layoutY="342.0" prefHeight="58.0" prefWidth="284.0">
                                              <buttons>
-                                                <JFXButton prefHeight="58.0" prefWidth="92.0" text="Button" />
-                                                <JFXButton minWidth="59.0" prefHeight="56.0" prefWidth="92.0" />
+                                                <JFXButton onAction="#handleNewVehicle" prefHeight="58.0" prefWidth="92.0" text="新建" />
+                                                <JFXButton minWidth="59.0" onAction="#handleEditVehicle" prefHeight="56.0" prefWidth="92.0" text="编辑" />
                                                 <JFXButton layoutX="125.0" layoutY="11.0" minWidth="59.0" onAction="#handleDeleteVehicle" prefHeight="56.0" prefWidth="92.0" text="删除" />
                                              </buttons>
                                           </ButtonBar>
@@ -134,11 +134,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </JFXTextField>
-                                                <JFXButton prefHeight="32.0" prefWidth="89.0" text="查询">
-                                                    <font>
-                                                        <Font size="16.0" />
-                                                    </font>
-                                                </JFXButton>
+                                                <JFXButton prefHeight="32.0" prefWidth="89.0" text="查询" />
                                                 <Label prefHeight="36.0" prefWidth="116.0" text="共找到：6000辆车" textFill="#e40f0f" />
                                             </children>
                                         </HBox>
