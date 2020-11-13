@@ -40,15 +40,14 @@ public class MainApp extends Application {
      */
     public MainApp() {
         // Add some sample data
-        vehicleData.add(new Vehicle("巴士", "IRNC", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "ITSS", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("通勤车", "ITSS", 88, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "IRNC", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("矿车", "GCNS", 88, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("通勤车", "ITSS", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("小汽车", "IRNC", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("小汽车", "IRNC", 33, "BUS", "综合管理部"));
-        vehicleData.add(new Vehicle("巴士", "IRNC", 33, "BUS", "综合管理部"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+
+
     }
 
     /**

@@ -14,15 +14,16 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VehicleEditDialogController">
    <children>
-      <GridPane layoutX="70.0" layoutY="59.0" prefHeight="312.0" prefWidth="475.0">
+      <GridPane layoutX="70.0" layoutY="67.0" prefHeight="304.0" prefWidth="197.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="89.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="331.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="127.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -40,18 +41,20 @@
             <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆名称" GridPane.rowIndex="5" />
             <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆型号" GridPane.rowIndex="6" />
             <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="识别代码" GridPane.rowIndex="7" />
-            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="进厂日期" GridPane.rowIndex="8" />
             <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="备注信息" GridPane.rowIndex="9" />
             <JFXTextField fx:id="vehicleTypeField" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" />
             <JFXTextField fx:id="companyField" layoutX="154.0" layoutY="10.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <JFXTextField fx:id="vehicleNumField" layoutX="154.0" layoutY="42.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <JFXTextField fx:id="categoryField" layoutX="154.0" layoutY="74.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <JFXTextField fx:id="departField" layoutX="154.0" layoutY="105.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <JFXTextField layoutX="154.0" layoutY="136.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <JFXTextField layoutX="154.0" layoutY="167.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <JFXTextField layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <JFXTextField layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <JFXTextField layoutX="154.0" layoutY="229.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <JFXTextField fx:id="vehiclenameField" layoutX="154.0" layoutY="136.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="vehiclecodeField" layoutX="154.0" layoutY="167.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXTextField fx:id="vehiclesnField" layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <JFXTextField fx:id="remarkField" layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <JFXTextField fx:id="imageaField" layoutX="154.0" layoutY="229.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" text="进厂日期" GridPane.rowIndex="8" />
+            <JFXTextField fx:id="entrydateField" layoutX="80.0" layoutY="10.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" text="图片1" GridPane.rowIndex="10" />
          </children>
       </GridPane>
       <HBox layoutX="138.0" layoutY="404.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="380.0">
@@ -88,5 +91,45 @@
             <Font size="22.0" />
          </font>
       </JFXButton>
+      <GridPane layoutX="302.0" layoutY="67.0" prefHeight="304.0" prefWidth="197.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="127.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="151.0" text="车辆类型" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="159.0" text="车所有权" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆编号" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆类别" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="使用部门" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆名称" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="车辆型号" GridPane.rowIndex="6" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="识别代码" GridPane.rowIndex="7" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="进厂日期" GridPane.rowIndex="8" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="151.0" text="备注信息" GridPane.rowIndex="9" />
+            <JFXTextField fx:id="imagebField" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" />
+            <JFXTextField fx:id="annexField" layoutX="154.0" layoutY="10.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField layoutX="154.0" layoutY="42.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXTextField layoutX="154.0" layoutY="74.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXTextField layoutX="154.0" layoutY="105.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField layoutX="154.0" layoutY="136.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXTextField layoutX="154.0" layoutY="167.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXTextField layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <JFXTextField layoutX="154.0" layoutY="198.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <JFXTextField layoutX="154.0" layoutY="229.0" prefHeight="40.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>

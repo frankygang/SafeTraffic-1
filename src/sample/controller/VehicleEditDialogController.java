@@ -11,6 +11,7 @@ import org.controlsfx.dialog.Dialogs;
 import sample.model.Vehicle;
 //import sample.util.DateUtil;
 import sample.model.Vehicle;
+import sample.util.DateUtil;
 
 /**
  * Dialog to edit details of a person.
@@ -29,9 +30,23 @@ public class VehicleEditDialogController {
     private TextField categoryField;
     @FXML
     private TextField departField;
-
-
-
+    @FXML
+    private TextField vehiclenameField;
+    @FXML
+    private TextField vehiclecodeField;
+    @FXML
+    private TextField vehiclesnField;
+    @FXML
+    private TextField entrydateField;
+    @FXML
+    private TextField remarkField;
+    @FXML
+    private TextField imageaField;
+    @FXML
+    private TextField imagebField;
+    @FXML
+    private TextField annexField;
+    //
     private Stage dialogStage;
     private Vehicle vehicle;
     private boolean okClicked = false;
@@ -66,7 +81,16 @@ public class VehicleEditDialogController {
         vehicleNumField.setText(Integer.toString(vehicle.getVehicleNum()));
         categoryField.setText(vehicle.getCategory());
         departField.setText(vehicle.getDepart());
-//        birthdayField.setPromptText("dd.mm.yyyy");
+        vehiclenameField.setText(vehicle.getVehiclename());
+        vehiclecodeField.setText(vehicle.getVehiclecode());
+        vehiclesnField.setText(vehicle.getVehiclesn());
+        entrydateField.setPromptText("dd.mm.yyyy");
+//      birthdayField.setPromptText("dd.mm.yyyy");
+        remarkField.setText(vehicle.getRemark());
+        imageaField.setText(vehicle.getImagea());
+        imagebField.setText(vehicle.getImageb());
+        annexField.setText(vehicle.getAnnex());
+
     }
 
     /**
@@ -89,6 +113,15 @@ public class VehicleEditDialogController {
             vehicle.setVehicleNum(Integer.parseInt(vehicleNumField.getText()));
             vehicle.setCategory(categoryField.getText());
             vehicle.setDepart(departField.getText());
+            vehicle.setVehiclename(vehiclenameField.getText());
+            vehicle.setVehiclecode(vehiclecodeField.getText());
+            vehicle.setVehiclesn(vehiclesnField.getText());
+            vehicle.setEntrydate(DateUtil.parse(entrydateField.getText()));
+            vehicle.setRemark(remarkField.getText());
+            vehicle.setImagea(imageaField.getText());
+            vehicle.setImageb(imagebField.getText());
+            vehicle.setAnnex(annexField.getText());
+
 
 
             okClicked = true;

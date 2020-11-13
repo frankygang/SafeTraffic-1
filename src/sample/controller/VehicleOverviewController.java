@@ -7,6 +7,7 @@ import javafx.scene.control.TableView;
 import org.controlsfx.dialog.Dialogs;
 import sample.MainApp;
 import sample.model.Vehicle;
+import sample.util.DateUtil;
 
 public class VehicleOverviewController {
     @FXML
@@ -21,6 +22,22 @@ public class VehicleOverviewController {
     private TableColumn<Vehicle, String> categoryColumn;
     @FXML
     private TableColumn<Vehicle, String> departColumn;
+    @FXML
+    private TableColumn<Vehicle, String> vehiclenameColumn;
+    @FXML
+    private TableColumn<Vehicle, String> vehiclecodeColumn;
+    @FXML
+    private TableColumn<Vehicle, String> vehiclesnColumn;
+    @FXML
+    private TableColumn<Vehicle, String> entrydateColumn;
+    @FXML
+    private TableColumn<Vehicle, String> remarkColumn;
+    @FXML
+    private TableColumn<Vehicle, String> imageaColumn;
+    @FXML
+    private TableColumn<Vehicle, String> imagebColumn;
+    @FXML
+    private TableColumn<Vehicle, String> annexColumn;
 
     @FXML
     private Label vehicleTypeLabel;
@@ -32,6 +49,23 @@ public class VehicleOverviewController {
     private Label categoryLabel;
     @FXML
     private Label departLabel;
+    @FXML
+    private Label vehiclenameLabel;
+    @FXML
+    private Label vehiclecodeLabel;
+    @FXML
+    private Label vehiclesnLabel;
+    @FXML
+    private Label entrydateLabel;
+    @FXML
+    private Label remarkLabel;
+    @FXML
+    private Label imageaLabel;
+    @FXML
+    private Label imagebLabel;
+    @FXML
+    private Label annexLabel;
+
 
     // Reference to the main application.
     private MainApp mainApp;
@@ -49,12 +83,20 @@ public class VehicleOverviewController {
      */
     @FXML
     private void initialize() {
-        // Initialize the person table with the two columns.
+        // Initialize the table with the columns用列初始化车辆表.
         vehicleTypeColumn.setCellValueFactory(cellData -> cellData.getValue().vehicleTypeProperty());
         companyColumn.setCellValueFactory(cellData -> cellData.getValue().companyProperty());
         vehicleNumColumn.setCellValueFactory(cellData -> cellData.getValue().vehicleNumProperty().asString());
         categoryColumn.setCellValueFactory(cellData -> cellData.getValue().categoryProperty());
         departColumn.setCellValueFactory(cellData -> cellData.getValue().departProperty());
+        vehiclenameColumn.setCellValueFactory(cellData -> cellData.getValue().vehiclenameProperty());
+        vehiclecodeColumn.setCellValueFactory(cellData -> cellData.getValue().vehiclecodeProperty());
+        vehiclesnColumn.setCellValueFactory(cellData -> cellData.getValue().vehiclesnProperty());
+        entrydateColumn.setCellValueFactory(cellData -> cellData.getValue().entrydateProperty().asString());
+        remarkColumn.setCellValueFactory(cellData -> cellData.getValue().remarkProperty());
+        imageaColumn.setCellValueFactory(cellData -> cellData.getValue().imageaProperty());
+        imagebColumn.setCellValueFactory(cellData -> cellData.getValue().imagebProperty());
+        annexColumn.setCellValueFactory(cellData -> cellData.getValue().annexProperty());
         //
         // Clear person details.
         showVehicleDetails(null);
@@ -81,12 +123,20 @@ public class VehicleOverviewController {
             // Fill the labels with info from the person object.
             vehicleTypeLabel.setText(vehicle.getVehicleType());
             companyLabel.setText(vehicle.getCompany());
-            vehicleNumLabel.setText(vehicle.getVehicleNum().toString());
+            vehicleNumLabel.setText(Integer.toString(vehicle.getVehicleNum()));
             categoryLabel.setText(vehicle.getCategory());
             departLabel.setText(vehicle.getDepart());
+            vehiclenameLabel.setText(vehicle.getVehiclename());
+            vehiclecodeLabel.setText(vehicle.getVehiclecode());
+            vehiclesnLabel.setText(vehicle.getVehiclesn());
+            entrydateLabel.setText(vehicle.getEntrydate().toString());
+            remarkLabel.setText(vehicle.getRemark());
+            imageaLabel.setText(vehicle.getImagea());
+            imagebLabel.setText(vehicle.getImageb());
+            annexLabel.setText(vehicle.getAnnex());
 
             // TODO: We need a way to convert the birthday into a String!
-            //birthdayLabel.setText(DateUtil.format(person.getBirthday()));
+            entrydateLabel.setText(DateUtil.format(vehicle.getEntrydate()));
         } else {
             // Person is null, remove all the text.
             vehicleTypeLabel.setText("");
@@ -95,6 +145,14 @@ public class VehicleOverviewController {
             categoryLabel.setText("");
             departLabel.setText("");
 //            birthdayLabel.setText("");
+            vehiclenameLabel.setText("");
+            vehiclecodeLabel.setText("");
+            vehiclesnLabel.setText("");
+            entrydateLabel.setText("");
+            remarkLabel.setText("");
+            imageaLabel.setText("");
+            imagebLabel.setText("");
+            annexLabel.setText("");
         }
 
     }
