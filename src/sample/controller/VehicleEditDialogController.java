@@ -170,13 +170,13 @@ public class VehicleEditDialogController {
             errorMessage += "No valid departField!\n";
         }
 
-////        if (birthdayField.getText() == null || birthdayField.getText().length() == 0) {
-////            errorMessage += "No valid birthday!\n";
-//        } else {
-//            if (!DateUtil.validDate(birthdayField.getText())) {
-//                errorMessage += "No valid birthday. Use the format dd.mm.yyyy!\n";
-//            }
-//        }
+        if (entrydateField.getText() == null || entrydateField.getText().length() == 0) {
+            errorMessage += "No valid entrydate!\n";
+        } else {
+            if (!DateUtil.validDate(entrydateField.getText())) {
+                errorMessage += "No valid entrydate. Use the format dd.mm.yyyy!\n";
+            }
+        }
 
         if (errorMessage.length() == 0) {
             return true;
