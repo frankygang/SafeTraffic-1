@@ -15,6 +15,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.controlsfx.dialog.Dialogs;
+import sample.controller.EntrydateStatisticsController;
 import sample.controller.RootLayoutController;
 import sample.controller.VehicleEditDialogController;
 import sample.controller.VehicleOverviewController;
@@ -253,6 +254,32 @@ public class MainApp extends Application {
             Dialogs.create().title("Error")
                     .masthead("Could not save data to file:\n" + file.getPath())
                     .showException(e);
+        }
+    }
+    /**
+     * Opens a dialog to show birthday statistics.
+     */
+    public void showEntrydateStatistics() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/EntrydateStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("图表");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the vehicles into the controller.
+            EntrydateStatisticsController controller = loader.getController();
+            controller.setVehicleData(vehicleData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

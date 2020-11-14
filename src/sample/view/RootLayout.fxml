@@ -4,10 +4,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
 <BorderPane fx:id="rootlayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RootLayoutController">
    <top>
-      <MenuBar fx:id="menubar" BorderPane.alignment="CENTER">
+      <MenuBar fx:id="menubar" prefHeight="29.0" prefWidth="946.0" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="文件">
             <items>
@@ -25,7 +26,7 @@
             </Menu>
           <Menu mnemonicParsing="false" text="图表">
             <items>
-              <MenuItem mnemonicParsing="false" text="车辆图表" />
+              <MenuItem mnemonicParsing="false" onAction="#handleShowEntrydateStatistics" text="车辆图表" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="帮助">
@@ -36,4 +37,7 @@
         </menus>
       </MenuBar>
    </top>
+   <left>
+      <Pane prefHeight="771.0" prefWidth="47.0" style="-fx-background-color: #151928;" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>

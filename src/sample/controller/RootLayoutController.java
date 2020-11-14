@@ -96,6 +96,13 @@ public class RootLayoutController {
             mainApp.saveVehicleDataToFile(file);
         }
     }
+    /**
+     * Opens the birthday statistics.
+     */
+    @FXML
+    private void handleShowEntrydateStatistics() {
+        mainApp.showEntrydateStatistics();
+    }
 
     /**
      * Opens an about dialog.
