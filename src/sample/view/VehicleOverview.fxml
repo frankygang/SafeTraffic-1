@@ -69,12 +69,12 @@
                                                    <children>
                                                       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
                                                          <image>
-                                                            <Image url="@../../../../../../Pictures/login-background.jpg" />
+                                                            <Image url="@../photo/login-background.jpg" />
                                                          </image>
                                                       </ImageView>
                                                       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="228.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../../../../../Pictures/profile.jpg" />
+                                                            <Image url="@../photo/login-background.jpg" />
                                                          </image>
                                                       </ImageView>
                                                    </children>
