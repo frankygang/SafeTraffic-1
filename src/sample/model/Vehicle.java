@@ -57,26 +57,26 @@ public class Vehicle {
     public Vehicle(String vehicleType,String company,Integer vehicleNum,String category,String depart,String vehiclename
             ,String vehiclecode,String vehiclesn,String entrydate,String remark,String imagea,String imageb,String annex) {
         // Some initial dummy data, just for convenient testing.
-        this.vehicleType = new SimpleStringProperty("巴士");
+        this.vehicleType = new SimpleStringProperty("车辆类型");
         this.company = new SimpleStringProperty("ITSS");
-        this.vehicleNum = new SimpleIntegerProperty(000);
+        this.vehicleNum = new SimpleIntegerProperty(001);
         this.category = new SimpleStringProperty("货车");
         this.depart = new SimpleStringProperty("综合管理部");
         this.vehiclename = new SimpleStringProperty("车辆名称");
         this.vehiclecode = new SimpleStringProperty("车牌号");
         this.vehiclesn = new SimpleStringProperty("车辆识别码");
-        this.entrydate = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
-        this.remark = new SimpleStringProperty("remark");
-        this.imagea = new SimpleStringProperty("imagea");
-        this.imageb = new SimpleStringProperty("imageb");
-        this.annex = new SimpleStringProperty("annex");
+        this.entrydate = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 02, 02));
+        this.remark = new SimpleStringProperty("备注");
+        this.imagea = new SimpleStringProperty("图片a");
+        this.imageb = new SimpleStringProperty("图表b");
+        this.annex = new SimpleStringProperty("附件");
     }
-    //
+//    //适配保存xml其日期格式
 //    @XmlJavaTypeAdapter(LocalDateAdapter.class)
-//    public LocalDate getBirthday() {
-//        return birthday.get();
+//    public LocalDate getEntrydate() {
+//        return entrydate.get();
 //    }
-    //
+
 
     public String getVehicleType() {
         return vehicleType.get();
@@ -174,9 +174,14 @@ public class Vehicle {
         this.vehiclesn.set(vehiclesn);
     }
 
+//    public LocalDate getEntrydate() {
+//        return entrydate.get();
+//    }
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getEntrydate() {
-        return entrydate.get();
+    return entrydate.get();
     }
+
 
     public ObjectProperty<LocalDate> entrydateProperty() {
         return entrydate;

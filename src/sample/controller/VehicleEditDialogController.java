@@ -84,7 +84,7 @@ public class VehicleEditDialogController {
         vehiclenameField.setText(vehicle.getVehiclename());
         vehiclecodeField.setText(vehicle.getVehiclecode());
         vehiclesnField.setText(vehicle.getVehiclesn());
-        entrydateField.setPromptText("dd.mm.yyyy");
+        entrydateField.setPromptText("yyyy.mm.dd");
 //      birthdayField.setPromptText("dd.mm.yyyy");
         remarkField.setText(vehicle.getRemark());
         imageaField.setText(vehicle.getImagea());
