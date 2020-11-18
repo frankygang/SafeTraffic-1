@@ -41,12 +41,12 @@ public class MainApp extends Application {
      */
     public MainApp() {
         // Add some sample data
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
-        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门","车辆名称","车辆型号","识别代码","19990101","备注信息","图片1","图片2","附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
+        vehicleData.add(new Vehicle("车辆类别", "公司名称", 001, "车辆类型", "所属部门", "车辆名称", "车辆型号", "识别代码", "19990101", "备注信息", "图片1", "图片2", "附件"));
 
 
     }
@@ -126,6 +126,7 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
     /**
      * Opens a dialog to edit details for the specified vehicle. If the user
      * clicks OK, the changes are saved into the provided vehicle object and true
@@ -163,6 +164,7 @@ public class MainApp extends Application {
             return false;
         }
     }
+
     /**
      * Returns the vehicle file preference, i.e. the file that was last opened.
      * The preference is read from the OS specific registry. If no such
@@ -200,6 +202,7 @@ public class MainApp extends Application {
             primaryStage.setTitle("AddressApp");
         }
     }
+
     /**
      * Loads vehicle data from the specified file. The current vehicle data will
      * be replaced.
@@ -256,6 +259,7 @@ public class MainApp extends Application {
                     .showException(e);
         }
     }
+
     /**
      * Opens a dialog to show birthday statistics.
      */

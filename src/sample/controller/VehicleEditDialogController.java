@@ -6,13 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import sample.MainApp;
 import org.controlsfx.dialog.Dialogs;
-
-import sample.model.Vehicle;
-//import sample.util.DateUtil;
 import sample.model.Vehicle;
 import sample.util.DateUtil;
+import sample.model.Vehicle;
+
 
 import java.io.File;
 

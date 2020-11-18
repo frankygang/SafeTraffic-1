@@ -126,6 +126,7 @@ public class VehicleOverviewController {
         // Add observable list data to the table
         vehicleTable.setItems(mainApp.getVehicleData());
     }
+
     private void showVehicleDetails(Vehicle vehicle) {
         if (vehicle != null) {
             // Fill the labels with info from the person object.
@@ -149,9 +150,9 @@ public class VehicleOverviewController {
 //            imagebLabel.setText(vehicle.getImageb());
             try {
                 Image imageb = new Image(vehicle.getImageb());
-                 imagebview.setImage(imageb);
+                imagebview.setImage(imageb);
             } catch (Exception e) {
-            imagebview.setImage(new Image("/sample/image/default-user-icon.png"));
+                imagebview.setImage(new Image("/sample/image/default-user-icon.png"));
             }
             annexLabel.setText(vehicle.getAnnex());
 
@@ -176,15 +177,16 @@ public class VehicleOverviewController {
         }
 
     }
+
     /**
      * Called when the user clicks on the delete button.
      */
     @FXML
     private void handleDeleteVehicle() {
         int selectedIndex = vehicleTable.getSelectionModel().getSelectedIndex();
-        if (selectedIndex >=0) {
+        if (selectedIndex >= 0) {
             vehicleTable.getItems().remove(selectedIndex);
-        }else{
+        } else {
             // Nothing selected.
             Dialogs.create()
                     .title("No Selection")
@@ -193,6 +195,7 @@ public class VehicleOverviewController {
                     .showWarning();
         }
     }
+
     /**
      * Called when the user clicks the new button. Opens a dialog to edit
      * details for a new person.
@@ -203,7 +206,7 @@ public class VehicleOverviewController {
         boolean okClicked = mainApp.showVehicleEditDialog(tempVehicle);
         if (okClicked) {
             mainApp.getVehicleData().add(tempVehicle);
-//            mainApp.getVehicleData().
+
         }
     }
 
@@ -213,7 +216,7 @@ public class VehicleOverviewController {
      */
     @FXML
     private void handleEditVehicle() {
-        Vehicle selectedVehicle =vehicleTable.getSelectionModel().getSelectedItem();
+        Vehicle selectedVehicle = vehicleTable.getSelectionModel().getSelectedItem();
         if (selectedVehicle != null) {
             boolean okClicked = mainApp.showVehicleEditDialog(selectedVehicle);
             if (okClicked) {

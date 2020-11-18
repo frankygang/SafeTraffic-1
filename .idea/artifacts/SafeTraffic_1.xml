@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="SafeTraffic-1">
+    <output-path>$PROJECT_DIR$/out/artifacts/SafeTraffic_1</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.MainApp" />
+        <option name="description" value="" />
+        <option name="height" value="900" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="车辆管理" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1200" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="SafeTraffic_1.jar">
+        <element id="module-output" name="SafeTraffic-1" />
+        <element id="library" level="project" name="jfoenix-8.0.10" />
+        <element id="library" level="project" name="controlsfx-8.0.6_20" />
+      </element>
+    </root>
+  </artifact>
+</component>
