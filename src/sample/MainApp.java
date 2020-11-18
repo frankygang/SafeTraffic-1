@@ -66,7 +66,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("App");
-        this.primaryStage.getIcons().add(new Image("file:resources/imagess/address_book_32.png"));
+        this.primaryStage.getIcons().add(new Image("file:sample/image/bookimage.png"));
 
         initRootLayout();
 
@@ -194,12 +194,12 @@ public class MainApp extends Application {
             prefs.put("filePath", file.getPath());
 
             // Update the stage title.
-            primaryStage.setTitle("AddressApp - " + file.getName());
+            primaryStage.setTitle("App - " + file.getName());
         } else {
             prefs.remove("filePath");
 
             // Update the stage title.
-            primaryStage.setTitle("AddressApp");
+            primaryStage.setTitle("App");
         }
     }
 
