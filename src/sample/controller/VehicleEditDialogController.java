@@ -4,14 +4,17 @@ package sample.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
+import sample.MainApp;
 import org.controlsfx.dialog.Dialogs;
 
 import sample.model.Vehicle;
 //import sample.util.DateUtil;
 import sample.model.Vehicle;
 import sample.util.DateUtil;
+
+import java.io.File;
 
 /**
  * Dialog to edit details of a person.
@@ -85,7 +88,6 @@ public class VehicleEditDialogController {
         vehiclecodeField.setText(vehicle.getVehiclecode());
         vehiclesnField.setText(vehicle.getVehiclesn());
         entrydateField.setPromptText("yyyy.mm.dd");
-//      birthdayField.setPromptText("dd.mm.yyyy");
         remarkField.setText(vehicle.getRemark());
         imageaField.setText(vehicle.getImagea());
         imagebField.setText(vehicle.getImageb());
@@ -128,6 +130,53 @@ public class VehicleEditDialogController {
             dialogStage.close();
         }
     }
+    /**
+     * Opens a FileChooser to let the user select an address book to load.
+     */
+    @FXML
+    private void handleuploadimagea() {
+        FileChooser fileChooser = new FileChooser();
+
+        // Set extension filter
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter(
+                "JPG files (*.jpg)", "*.jpg");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+
+        // Show save file dialog
+        File file = fileChooser.showOpenDialog(dialogStage);
+
+        if (file != null) {
+
+            String  Path = file.toString();
+            String imagePath= Path.substring(Path.lastIndexOf("src")+3,Path.length());
+            imageaField.setText(imagePath);
+        }
+    }
+    /**
+     * Opens a FileChooser to let the user select an address book to load.
+     */
+    @FXML
+    private void handleuploadimageb() {
+        FileChooser fileChooser = new FileChooser();
+
+        // Set extension filter
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter(
+                "JPG files (*.jpg)", "*.jpg");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+
+        // Show save file dialog
+        File file = fileChooser.showOpenDialog(dialogStage);
+
+        if (file != null) {
+
+            String  Path = file.toString();
+            String imagePath= Path.substring(Path.lastIndexOf("src")+3,Path.length());
+            imagebField.setText(imagePath);
+        }
+    }
+
 
     /**
      * Called when the user clicks cancel.

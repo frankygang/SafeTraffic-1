@@ -10,7 +10,6 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -21,176 +20,332 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="vehicleOverview" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VehicleOverviewController">
+<AnchorPane fx:id="vehicleOverview" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.VehicleOverviewController">
     <children>
-        <TabPane layoutX="45.0" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <TabPane layoutX="45.0" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE"
+                 AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="0.0">
             <tabs>
                 <Tab fx:id="vehicalview" text="车辆查询">
-               <content>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="900.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <SplitPane dividerPositions="0.25" orientation="VERTICAL" prefHeight="437.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <items>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <children>
-                                                <TableView fx:id="vehicleTable" nodeOrientation="LEFT_TO_RIGHT" prefHeight="162.0" prefWidth="898.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                  <columns>
-                                                    <TableColumn fx:id="vehicleTypeColumn" prefWidth="95.0" text="车辆类型" />
-                                                      <TableColumn fx:id="companyColumn" prefWidth="95.0" text="所有权" />
-                                                      <TableColumn fx:id="vehicleNumColumn" prefWidth="95.0" text="编号" />
-                                                      <TableColumn fx:id="categoryColumn" prefWidth="95.0" text="类别" />
-                                                      <TableColumn fx:id="departColumn" prefWidth="95.0" text="使用部门" />
-                                                      <TableColumn fx:id="vehiclenameColumn" prefWidth="95.0" text="车辆名称" />
-                                                      <TableColumn fx:id="vehiclecodeColumn" prefWidth="95.0" text="车牌号码" />
-                                                      <TableColumn fx:id="vehiclesnColumn" prefWidth="95.0" text="车牌识别码" />
-                                                      <TableColumn fx:id="entrydateColumn" prefWidth="95.0" text="进场日期" />
-                                                      <TableColumn fx:id="remarkColumn" prefWidth="95.0" text="备注" />
-                                                      <TableColumn fx:id="imageaColumn" prefWidth="95.0" text="图片1" />
-                                                      <TableColumn fx:id="imagebColumn" prefWidth="95.0" text="图片2" />
-                                                      <TableColumn fx:id="annexColumn" prefWidth="95.0" text="附件" />
-                                                  </columns>
-                                                   <columnResizePolicy>
-                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                                   </columnResizePolicy>
-                                                </TableView>
-                                             </children>
-                                                      </AnchorPane>
-                                       </children>
-                                    </AnchorPane>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="898.0">
-                                       <children>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="475.0">
-                                             <children>
-                                                <Pane layoutX="223.0" prefHeight="310.0" prefWidth="410.0" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="0.0">
-                                                   <children>
-                                                      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
-                                                         <image>
-                                                            <Image url="@../photo/login-background.jpg" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="228.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@../photo/login-background.jpg" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </children>
-                                                </Pane>
-                                                <GridPane layoutX="14.0" layoutY="23.0">
-                                                  <columnConstraints>
-                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                  </columnConstraints>
-                                                  <rowConstraints>
-                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                  </rowConstraints>
-                                                   <children>
-                                                      <Label prefHeight="40.0" prefWidth="116.0" text="Label" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="1" />
-                                                      <Label layoutX="10.0" layoutY="40.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="2" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="3" />
-                                                      <Label fx:id="vehicleTypeLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" />
-                                                      <Label fx:id="companyLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="4" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="5" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="6" />
-                                                      <Label fx:id="vehicleNumLabel" layoutX="110.0" layoutY="40.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <Label fx:id="categoryLabel" layoutX="110.0" layoutY="70.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                      <Label fx:id="departLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                      <Label fx:id="vehiclenameLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                      <Label fx:id="vehiclecodeLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                                   </children>
-                                                </GridPane>
-                                                <ButtonBar layoutX="214.0" layoutY="342.0" prefHeight="58.0" prefWidth="284.0">
-                                                   <buttons>
-                                                      <JFXButton onAction="#handleNewVehicle" prefHeight="58.0" prefWidth="92.0" text="新建" />
-                                                      <JFXButton minWidth="59.0" onAction="#handleEditVehicle" prefHeight="56.0" prefWidth="92.0" text="编辑" />
-                                                      <JFXButton layoutX="125.0" layoutY="11.0" minWidth="59.0" onAction="#handleDeleteVehicle" prefHeight="56.0" prefWidth="92.0" text="删除" />
-                                                   </buttons>
-                                                </ButtonBar>
-                                                <GridPane layoutX="14.0" layoutY="233.0">
-                                                   <columnConstraints>
-                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                   </columnConstraints>
-                                                   <rowConstraints>
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                   </rowConstraints>
-                                                   <children>
-                                                      <Label prefHeight="40.0" prefWidth="116.0" text="Label" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="1" />
-                                                      <Label layoutX="10.0" layoutY="40.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="2" />
-                                                      <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="3" />
-                                                      <Label fx:id="vehiclesnLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" />
-                                                      <Label fx:id="entrydateLabel" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <Label fx:id="remarkLabel" layoutX="110.0" layoutY="40.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <Label fx:id="imageaLabel" layoutX="110.0" layoutY="70.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                      <Label fx:id="imagebLabel" layoutX="110.0" layoutY="100.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                      <Label fx:id="annexLabel" layoutX="110.0" layoutY="130.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                      <Label layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="4" />
-                                                      <Label layoutX="10.0" layoutY="70.0" prefHeight="40.0" prefWidth="116.0" text="Label" GridPane.rowIndex="5" />
-                                                      <Label fx:id="imageaLable1" layoutX="110.0" layoutY="100.0" prefHeight="40.0" prefWidth="116.0" text="Label" />
-                                                   </children>
-                                                </GridPane>
-                                             </children>
-                                          </AnchorPane>
-                                       </children>
-                                    </AnchorPane>
-                                </items>
-                              </SplitPane>
-                           </children>
+                    <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                            <center>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="900.0"
+                                            BorderPane.alignment="CENTER">
+                                    <children>
+                                        <SplitPane dividerPositions="0.25" orientation="VERTICAL" prefHeight="437.0"
+                                                   prefWidth="900.0" AnchorPane.bottomAnchor="0.0"
+                                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                   AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+                                                            prefWidth="160.0">
+                                                    <children>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0"
+                                                                    prefWidth="900.0" AnchorPane.bottomAnchor="0.0"
+                                                                    AnchorPane.leftAnchor="0.0"
+                                                                    AnchorPane.rightAnchor="0.0"
+                                                                    AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <TableView fx:id="vehicleTable"
+                                                                           nodeOrientation="LEFT_TO_RIGHT"
+                                                                           prefHeight="162.0" prefWidth="898.0"
+                                                                           tableMenuButtonVisible="true"
+                                                                           AnchorPane.bottomAnchor="0.0"
+                                                                           AnchorPane.leftAnchor="0.0"
+                                                                           AnchorPane.rightAnchor="0.0"
+                                                                           AnchorPane.topAnchor="0.0">
+                                                                    <columns>
+                                                                        <TableColumn fx:id="vehicleTypeColumn"
+                                                                                     prefWidth="95.0" text="车辆类型"/>
+                                                                        <TableColumn fx:id="companyColumn"
+                                                                                     prefWidth="95.0" text="所有权"/>
+                                                                        <TableColumn fx:id="vehicleNumColumn"
+                                                                                     prefWidth="95.0" text="编号"/>
+                                                                        <TableColumn fx:id="categoryColumn"
+                                                                                     prefWidth="95.0" text="类别"/>
+                                                                        <TableColumn fx:id="departColumn"
+                                                                                     prefWidth="95.0" text="使用部门"/>
+                                                                        <TableColumn fx:id="vehiclenameColumn"
+                                                                                     prefWidth="95.0" text="车辆名称"/>
+                                                                        <TableColumn fx:id="vehiclecodeColumn"
+                                                                                     prefWidth="95.0" text="车牌号码"/>
+                                                                        <TableColumn fx:id="vehiclesnColumn"
+                                                                                     prefWidth="95.0" text="车牌识别码"/>
+                                                                        <TableColumn fx:id="entrydateColumn"
+                                                                                     prefWidth="95.0" text="进场日期"/>
+                                                                        <TableColumn fx:id="remarkColumn"
+                                                                                     prefWidth="95.0" text="备注"/>
+                                                                        <TableColumn fx:id="imageaColumn"
+                                                                                     prefWidth="95.0" text="图片1"/>
+                                                                        <TableColumn fx:id="imagebColumn"
+                                                                                     prefWidth="95.0" text="图片2"/>
+                                                                        <TableColumn fx:id="annexColumn"
+                                                                                     prefWidth="95.0" text="附件"/>
+                                                                    </columns>
+                                                                    <columnResizePolicy>
+                                                                        <TableView
+                                                                                fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                                                    </columnResizePolicy>
+                                                                </TableView>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0"
+                                                            prefWidth="898.0">
+                                                    <children>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0"
+                                                                    prefWidth="475.0">
+                                                            <children>
+                                                                <Pane layoutX="223.0" prefHeight="310.0"
+                                                                      prefWidth="410.0" AnchorPane.leftAnchor="223.0"
+                                                                      AnchorPane.rightAnchor="0.0">
+                                                                    <children>
+                                                                        <ImageView fx:id="imageaview" fitHeight="150.0"
+                                                                                   fitWidth="200.0" layoutX="14.0"
+                                                                                   layoutY="14.0" pickOnBounds="true"/>
+                                                                        <ImageView fx:id="imagebview" fitHeight="150.0"
+                                                                                   fitWidth="200.0" layoutX="228.0"
+                                                                                   layoutY="14.0" pickOnBounds="true"/>
+                                                                    </children>
+                                                                </Pane>
+                                                                <GridPane layoutX="14.0" layoutY="23.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="1"/>
+                                                                        <Label layoutX="10.0" layoutY="40.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="2"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="3"/>
+                                                                        <Label fx:id="vehicleTypeLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"/>
+                                                                        <Label fx:id="companyLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="1"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="4"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="5"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="6"/>
+                                                                        <Label fx:id="vehicleNumLabel" layoutX="110.0"
+                                                                               layoutY="40.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="2"/>
+                                                                        <Label fx:id="categoryLabel" layoutX="110.0"
+                                                                               layoutY="70.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="3"/>
+                                                                        <Label fx:id="departLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="4"/>
+                                                                        <Label fx:id="vehiclenameLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="5"/>
+                                                                        <Label fx:id="vehiclecodeLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="6"/>
+                                                                    </children>
+                                                                </GridPane>
+                                                                <ButtonBar layoutX="214.0" layoutY="342.0"
+                                                                           prefHeight="58.0" prefWidth="284.0">
+                                                                    <buttons>
+                                                                        <JFXButton onAction="#handleNewVehicle"
+                                                                                   prefHeight="58.0" prefWidth="92.0"
+                                                                                   text="新建"/>
+                                                                        <JFXButton minWidth="59.0"
+                                                                                   onAction="#handleEditVehicle"
+                                                                                   prefHeight="56.0" prefWidth="92.0"
+                                                                                   text="编辑"/>
+                                                                        <JFXButton layoutX="125.0" layoutY="11.0"
+                                                                                   minWidth="59.0"
+                                                                                   onAction="#handleDeleteVehicle"
+                                                                                   prefHeight="56.0" prefWidth="92.0"
+                                                                                   text="删除"/>
+                                                                    </buttons>
+                                                                </ButtonBar>
+                                                                <GridPane layoutX="14.0" layoutY="233.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="1"/>
+                                                                        <Label layoutX="10.0" layoutY="40.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="2"/>
+                                                                        <Label layoutX="10.0" layoutY="10.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="3"/>
+                                                                        <Label fx:id="vehiclesnLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"/>
+                                                                        <Label fx:id="entrydateLabel" layoutX="10.0"
+                                                                               layoutY="10.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="1"/>
+                                                                        <Label fx:id="remarkLabel" layoutX="110.0"
+                                                                               layoutY="40.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="2"/>
+                                                                        <Label fx:id="imageaLabel" layoutX="110.0"
+                                                                               layoutY="70.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="3"/>
+                                                                        <Label fx:id="imagebLabel" layoutX="110.0"
+                                                                               layoutY="100.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="4"/>
+                                                                        <Label fx:id="annexLabel" layoutX="110.0"
+                                                                               layoutY="130.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.rowIndex="5"/>
+                                                                        <Label layoutX="10.0" layoutY="100.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="4"/>
+                                                                        <Label layoutX="10.0" layoutY="70.0"
+                                                                               prefHeight="40.0" prefWidth="116.0"
+                                                                               text="Label" GridPane.rowIndex="5"/>
+                                                                        <Label fx:id="imageaLable1" layoutX="110.0"
+                                                                               layoutY="100.0" prefHeight="40.0"
+                                                                               prefWidth="116.0" text="Label"/>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
                                 </AnchorPane>
-                     </center>
-                     <top>
-                        <BorderPane prefHeight="75.0" prefWidth="900.0" BorderPane.alignment="CENTER">
-                           <top>
-                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="900.0" text="车辆查询" BorderPane.alignment="CENTER">
+                            </center>
+                            <top>
+                                <BorderPane prefHeight="75.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                                    <top>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0"
+                                               prefWidth="900.0" text="车辆查询" BorderPane.alignment="CENTER">
                                             <font>
-                                                <Font size="29.0" />
+                                                <Font size="29.0"/>
                                             </font>
                                         </Label>
-                           </top>
-                           <bottom>
-                                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                                    </top>
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="900.0"
+                                              BorderPane.alignment="CENTER">
                                             <children>
                                                 <Label prefHeight="30.0" prefWidth="90.0" text="查询方式">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Label>
-                                                <JFXComboBox prefHeight="27.0" prefWidth="101.0" />
-                                                <JFXComboBox prefHeight="27.0" prefWidth="88.0" />
+                                                    <font>
+                                                        <Font size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <JFXComboBox prefHeight="27.0" prefWidth="101.0"/>
+                                                <JFXComboBox prefHeight="27.0" prefWidth="88.0"/>
                                                 <JFXTextField prefHeight="19.0" prefWidth="151.0">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXTextField>
-                                                <JFXButton prefHeight="32.0" prefWidth="89.0" text="查询" />
-                                                <Label prefHeight="36.0" prefWidth="116.0" text="共找到：6000辆车" textFill="#e40f0f" />
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXButton prefHeight="32.0" prefWidth="89.0" text="查询"/>
+                                                <Label prefHeight="36.0" prefWidth="116.0" text="共找到：6000辆车"
+                                                       textFill="#e40f0f"/>
                                             </children>
                                         </HBox>
-                           </bottom>
+                                    </bottom>
+                                </BorderPane>
+                            </top>
                         </BorderPane>
-                     </top>
-                  </BorderPane>
-               </content>
+                    </content>
                 </Tab>
-                <Tab text="车辆明细" />
-                <Tab text="车辆登记" />
+                <Tab text="车辆明细"/>
+                <Tab text="车辆登记"/>
             </tabs>
         </TabPane>
     </children>

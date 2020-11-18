@@ -65,8 +65,8 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AddressApp");
-        this.primaryStage.getIcons().add(new Image("file:resources/images/address_book_32.png"));
+        this.primaryStage.setTitle("App");
+        this.primaryStage.getIcons().add(new Image("file:resources/imagess/address_book_32.png"));
 
         initRootLayout();
 
@@ -75,7 +75,7 @@ public class MainApp extends Application {
 
     /**
      * Initializes the root layout and tries to load the last opened
-     * person file.
+     * vehicle file.
      */
     public void initRootLayout() {
         try {
@@ -98,7 +98,7 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
 
-        // Try to load last opened person file.
+        // Try to load last opened vehicle file.
         File file = getVehicleFilePath();
         if (file != null) {
             loadVehicleDataFromFile(file);
@@ -106,7 +106,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Shows the person overview inside the root layout.
+     * Shows the vehicle overview inside the root layout.
      */
     public void showVehicleOverview() {
         try {
@@ -115,7 +115,7 @@ public class MainApp extends Application {
             loader.setLocation(MainApp.class.getResource("view/VehicleOverview.fxml"));
             AnchorPane vehicleOverview = (AnchorPane) loader.load();
 
-            // Set person overview into the center of root layout.
+            // Set vehicle overview into the center of root layout.
             rootLayout.setCenter(vehicleOverview);
 
             // Give the controller access to the main app.
@@ -127,11 +127,11 @@ public class MainApp extends Application {
         }
     }
     /**
-     * Opens a dialog to edit details for the specified person. If the user
-     * clicks OK, the changes are saved into the provided person object and true
+     * Opens a dialog to edit details for the specified vehicle. If the user
+     * clicks OK, the changes are saved into the provided vehicle object and true
      * is returned.
      *
-     * @param vehicle the person object to be edited
+     * @param vehicle the vehicle object to be edited
      * @return true if the user clicked OK, false otherwise.
      */
     public boolean showVehicleEditDialog(Vehicle vehicle) {
@@ -143,7 +143,7 @@ public class MainApp extends Application {
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("Edit Vehicle");
+            dialogStage.setTitle("编辑车辆");
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(page);
@@ -201,7 +201,7 @@ public class MainApp extends Application {
         }
     }
     /**
-     * Loads person data from the specified file. The current person data will
+     * Loads vehicle data from the specified file. The current vehicle data will
      * be replaced.
      *
      * @param file
@@ -230,7 +230,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Saves the current person data to the specified file.
+     * Saves the current vehicle data to the specified file.
      *
      * @param file
      */

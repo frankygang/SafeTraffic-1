@@ -4,12 +4,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.controlsfx.dialog.Dialogs;
 import sample.MainApp;
 import sample.model.Vehicle;
 import sample.util.DateUtil;
 
 public class VehicleOverviewController {
+    @FXML
+    private ImageView imageaview;
+    @FXML
+    private ImageView imagebview;
+    //
     @FXML
     private TableView<Vehicle> vehicleTable;
     @FXML
@@ -38,6 +45,7 @@ public class VehicleOverviewController {
     private TableColumn<Vehicle, String> imagebColumn;
     @FXML
     private TableColumn<Vehicle, String> annexColumn;
+
 
     @FXML
     private Label vehicleTypeLabel;
@@ -131,8 +139,20 @@ public class VehicleOverviewController {
             vehiclesnLabel.setText(vehicle.getVehiclesn());
             entrydateLabel.setText(vehicle.getEntrydate().toString());
             remarkLabel.setText(vehicle.getRemark());
-            imageaLabel.setText(vehicle.getImagea());
-            imagebLabel.setText(vehicle.getImageb());
+//            imageaLabel.setText(vehicle.getImagea());
+            try {
+                Image imagea = new Image(vehicle.getImagea());
+                imageaview.setImage(imagea);
+            } catch (Exception e) {
+                imageaview.setImage(new Image("/sample/image/default-user-icon.png"));
+            }
+//            imagebLabel.setText(vehicle.getImageb());
+            try {
+                Image imageb = new Image(vehicle.getImageb());
+                 imagebview.setImage(imageb);
+            } catch (Exception e) {
+            imagebview.setImage(new Image("/sample/image/default-user-icon.png"));
+            }
             annexLabel.setText(vehicle.getAnnex());
 
             // TODO: We need a way to convert the birthday into a String!
@@ -183,6 +203,7 @@ public class VehicleOverviewController {
         boolean okClicked = mainApp.showVehicleEditDialog(tempVehicle);
         if (okClicked) {
             mainApp.getVehicleData().add(tempVehicle);
+//            mainApp.getVehicleData().
         }
     }
 
